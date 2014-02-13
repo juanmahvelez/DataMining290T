@@ -8,7 +8,11 @@ import fileinput
 import csv
 
 total = 0.0
+amtarray = []
+sumerror = 0.0
+candarray = []
 
+data = csv.reader(fileinput.input("../data/itpas2.txt"),delimiter='|')
 for row in data:
     #if not fileinput.isfirstline():
     amt = float(row[14])
@@ -46,7 +50,7 @@ print "Candidates: " , candidates
 def minmax_normalize(value):
     """Takes a donation amount and returns a normalized value between 0-1. The
     normilzation should use the min and max amounts from the full dataset"""
-    
+
     norm = ((value - minimum)/(maximum - minimum))
     return norm
 
