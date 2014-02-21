@@ -1,0 +1,37 @@
+##Data Examination Homework
+
+Dataset: Bart Employee Salaries, scraped from: http://www.mercurynews.com/salaries/bay-area, saved on public github repo: https://github.com/enjalot/bart/blob/master/data/bart-comp-all.csv
+Data format: .csv
+Types of data available: Employee name, Title, Job class (e.g. Administrative and management), Union affiliation, Salary breakdown
+Since this is not an API, no restrictions on fetching data.
+Interesting observations:
+- Grace Crunican, General Manager is the highest paid BART employee with a base salary of $312461
+	-"Crunican, Grace",General Manager,312461,0,3846,19141,37513,17500,1869,7591,399921,MNP,Executive Management,Non-Represented
+-Here's a breakdown of the mean Base salary by group (done in R)
+		>                           Job.Family meanBaseSalary
+		> 1        Administrative & Management       76951.35
+		> 2                              Audit      102581.00
+		> 3                           Clerical       56659.06
+		> 4  Engineering & Systems Engineering      104755.11
+		> 5               Executive Management      165792.29
+		> 6               Finance & Accounting       76720.48
+		> 7  Human Resources & Labor Relations       88760.48
+		> 8                Information Systems       96549.79
+		> 9                  Legal & Paralegal      119759.74
+		> 10 Maintenance, Vehicle & Facilities       67110.45
+		> 11                          Planning      102500.25
+		> 12                            Police       56193.29
+		> 13                       Procurement       72472.55
+		> 14        Public Affairs & Marketing       95745.30
+		> 15                       Real Estate       94580.25
+		> 16                            Safety      106372.90
+		> 17                 Technical Support       95109.17
+		> 18  Training: Technical & Management       85898.32
+		> 19         Transportation Operations       62467.61
+Some Questions you can answer with this data:
+Unfortunately, this data set is not as wide as I was hoping. There are not too many interesting variables.
+However, it would be interesting to use the data to examine BART payroll practices. If you could match/integrate with other datasets, it would be interesting to see:
+1. What's the average salary increase by Job Family/ are there outliers?
+2. How is salary correlated to # years working and other factors?
+3. What % of budget goes to salary?
+4. This is pretty far out there, but suppose we have an organizational chart. How does salary correlate to degrees of separation from executive managers?
