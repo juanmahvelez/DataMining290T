@@ -22,20 +22,24 @@ CANDIDATES = {
 # TODO: declare datastructures
 
 ############### Read through files
-for row in csv.reader(fileinput.input(), delimiter='|'):
+for row in csv.reader(fileinput.input("../data/itpas2.txt"), delimiter='|'):
     candidate_id = row[CAND_ID]
     if candidate_id not in CANDIDATES:
         continue
 
     candidate_name = CANDIDATES[candidate_id]
     zip_code = row[ZIP_CODE]
+
+classes = CANDIDATES.values()
+print classes
     ###
     # TODO: save information to calculate Gini Index
     ##/
 
+
 ###
 # TODO: calculate the values below:
-gini = 0  # current Gini Index using candidate name as the class
+gini = 1 - sum(frac**2 for frac in classes)  # current Gini Index using candidate name as the class
 split_gini = 0  # weighted average of the Gini Indexes using candidate names, split up by zip code
 ##/
 
